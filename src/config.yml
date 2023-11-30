@@ -1,0 +1,10 @@
+#Config file for BusinessSystem
+
+#payouts are in % of total income
+#if the employee each * total number of employees > total, employee total will be divided beetween all employees equally
+payouts:
+  business: 50
+  owner: 10
+  employee:
+    total: 40
+    each: 5

@@ -1,0 +1,4 @@
+name: BusinessSystem
+version: '${project.version}'
+main: ccrp.businesssystem.BusinessSystem
+api-version: '1.19'
