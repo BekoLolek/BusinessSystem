@@ -1,5 +1,5 @@
 name: BusinessSystem
-version: '${project.version}'
+version: '1.0-SNAPSHOT'
 main: ccrp.businesssystem.BusinessSystem
 api-version: '1.19'
 commands:

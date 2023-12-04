@@ -1,6 +1,9 @@
 package ccrp.businesssystem.model;
 
+import ccrp.businesssystem.BusinessSystem;
+import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
+import org.bukkit.plugin.Plugin;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,9 +11,23 @@ import java.util.List;
 
 public abstract class Business {
     private int id = 0;
-    private int ownerPayout = 0;
+    private int ownerPayout;
     private int employeePayout = 0;
-    private int businessPayout = 0;
+    private int businessPayout;
+
+    private Plugin plugin;
+
+    public Business() {
+        this.plugin = BusinessSystem.getPlugin();
+
+        ownerPayout = (int) plugin.getConfig().get("payouts.owner");
+        businessPayout = (int) plugin.getConfig().get("payouts.business");
+        employeePayout = (int) plugin.getConfig().get("payouts.employee");
+
+        if(ownerPayout + businessPayout + employeePayout > 100){
+            Bukkit.getLogger().severe("Payouts should not exceed 100 in total!");
+        }
+    }
 
     ArrayList<Employee> employees = new ArrayList<>();
 

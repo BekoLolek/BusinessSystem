@@ -1,11 +1,9 @@
 package ccrp.businesssystem.commands.SubCommands;
 
-import ccrp.businesssystem.BusinessSystem;
 import ccrp.businesssystem.commands.SubCommand;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
-public class ReloadCommand extends SubCommand {
+public class CreateBusinessCommand extends SubCommand {
     @Override
     public String getName() {
         return null;
@@ -24,10 +22,5 @@ public class ReloadCommand extends SubCommand {
     @Override
     public void perform(Player player, String[] args) {
 
-    }
-
-    public void performConsole(){
-        BusinessSystem.getPlugin().reloadConfig();
-        Bukkit.getLogger().info("Config reloaded successfully!");
     }
 }
