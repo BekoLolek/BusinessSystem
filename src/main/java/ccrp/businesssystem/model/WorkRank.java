@@ -1,11 +1,8 @@
 package ccrp.businesssystem.model;
 
-import org.bukkit.OfflinePlayer;
-
-public class Employee {
+public class WorkRank {
     public String uuid;
     public String name;
-    public Work work;
-
-
+    public String description;
+    public int salary;
 }
